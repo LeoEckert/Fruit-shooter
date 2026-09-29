@@ -2,7 +2,7 @@
 
 > Version 0.1 · Stand: 2026-09-29 · Status: Konzept (noch keine Implementierung)
 >
-> English version: [GAME_DESIGN.md](GAME_DESIGN.md)
+> English version: [GAME_DESIGN_FULL.md](GAME_DESIGN_FULL.md)
 >
 > Dieses Dokument beschreibt Features, Inhalte und Regeln des Spiels. Es ist die
 > Grundlage für die Implementierung durch weitere Agenten. Zahlenwerte sind
