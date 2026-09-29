@@ -45,6 +45,7 @@ bringt, bevor es morgen früh zu Smoothie verarbeitet wird.
 | **Schießen ist alles** | Jede Mechanik baut auf dem Schuss auf. Kein Laufen, kein Bauen, keine Menüs im Level. Zielen, loslassen, im Flug einmal tippen. |
 | **Chaos mit Ursache** | Einstürze und Kettenreaktionen sind spektakulär, aber nachvollziehbar. Wer das Level versteht, kann das Chaos planen. |
 | **Küchenlogik** | Jede Regel ergibt im Alltag Sinn: Saft macht nass, nasse Toaster schlagen Funken, Eis rutscht, Honig klebt. Spieler sollen Wechselwirkungen erraten können. |
+| **Gegner schießen nie zurück** | Geräte sind Ziele, keine Angreifer. Sie feuern keine Geschosse und greifen die Schleuder nicht an. Sie wirken auf Früchte nur durch Berührung oder passive Zonen (Dampf, Sog, Kälte). |
 | **Albern, nie gemein** | Slapstick statt Gewalt. Geräte gehen kaputt, fallen um, klappern, jammern. Obst platzt in Saft, nicht in Blut. |
 | **Kurz und wiederholbar** | Ein Level dauert 30 bis 90 Sekunden. Neustart ist sofort möglich. |
 
@@ -252,10 +253,9 @@ einmal neu ausgerichtet werden (zweites Zielen mitten im Flug).
 
 ### 4.4 Frucht-Reihenfolge und Obstschale
 
-- **Standard:** Jedes Level legt die **Reihenfolge** der Früchte fest (wie im
-  Vorbild). Die Obstschale links neben der Schleuder zeigt alle kommenden Früchte.
-- **Ab Welt 3 – „Obstkorb-Levels":** Einzelne Levels erlauben, die **Reihenfolge
-  frei zu wählen** (Tippen auf eine Frucht in der Schale lädt sie).
+- **Feste Reihenfolge (entschieden):** Jedes Level legt die **Reihenfolge** der
+  Früchte fest (wie im Vorbild). Der Spieler kann sie nicht ändern. Die Obstschale
+  links neben der Schleuder zeigt alle kommenden Früchte, damit man planen kann.
 - **Übrige Früchte = Bonuspunkte** (siehe [10](#10-punkte-sterne--bewertung)).
   Beim Sieg hüpfen sie jubelnd aus der Schale.
 
@@ -281,8 +281,9 @@ ersten Auslösen im Rezeptbuch eingetragen.
 ## 5. Die Mixer-Gang (Gegner)
 
 Die Gegner sind Küchengeräte mit Gesichtern (Knöpfe als Augen, Kabel als
-Schwanz). Sie **greifen in den meisten Fällen nicht an** – sie sind die Ziele.
-Einige Geräte haben aber **aktives Verhalten**, das die Festung verändert.
+Schwanz). Sie **greifen nie an und schießen nie zurück** – sie sind die Ziele.
+Einige Geräte haben aber **aktives Verhalten**, das die Festung verändert oder
+auf Früchte reagiert, die sie berühren oder in ihre Zone geraten.
 Dadurch entsteht Abwechslung, ohne dass der Spieler etwas anderes tun muss als
 schießen.
 
@@ -308,7 +309,7 @@ schießen.
 | **Mikrowelle** | sehr hoch | Tür öffnet und schließt sich im Takt. Offen = ein Fruchtschuss hinein schließt die Tür, nach 2 s **explodiert die Frucht** darin (großer Innenschaden). |
 | **Waage** | mittel | Kippt Plattformen: Was auf einer Seite liegt, hebt die andere. Physikalisches Rätselelement. |
 | **Staubsauger-Roboter** | mittel | Fährt auf dem Boden hin und her und **saugt liegende Früchte ein** (Kiwi-Konter). Schiebt kleine Objekte. |
-| **Messerblock** | hoch | Schießt alle 6 s ein Messer waagerecht Richtung Schleuder. Trifft es eine Frucht **im Flug**, wird diese halbiert (zwei schwächere Hälften fliegen weiter). Einziger „schießender" Gegner. |
+| **Messerblock** | hoch | Oben ragen Klingen heraus, die alle 6 s hochfahren. Eine Frucht, die die Klingen trifft, wird halbiert (zwei schwächere Hälften fliegen weiter). Die Holzseite zu treffen ist sicher. |
 | **Kühlschrankmagnet** | niedrig | Zieht in kleinem Radius Metall an und hält Konstruktionen zusammen, bis er zerstört wird – dann fällt alles auseinander. |
 | **Eiswürfelbereiter** | mittel | Friert Früchte ein, die ihn treffen (Frucht wird zum Eisblock: rutscht, schwer, bricht). |
 
@@ -469,15 +470,16 @@ jeder Phase baut die Gang die Festung teilweise neu auf (Animation). Früchte
 werden pro Phase neu aufgefüllt, Gesamtpunkte zählen.
 
 ### Welt 1 – Toast-Tyrann
-- **Phase 1:** Steht hinter einer Mauer aus Toastscheiben. Schleudert alle 4 s
-  Toast, der als neue Deckung liegenbleibt. → Deckung schneller abbauen, als er
+- **Phase 1:** Steht hinter einer Mauer aus Toastscheiben. Lässt alle 4 s
+  Toast hochspringen, der vor ihm als neue Deckung landet. → Deckung schneller abbauen, als er
   nachlegt.
 - **Phase 2:** Hebel an der Seite sichtbar. Treffer → er springt hoch und
   landet unsanft. → Nasse Früchte in die Schlitze = Kurzschluss-Schaden.
 - **Phase 3:** Steht auf Wackelplatte über der Spüle. Umwerfen.
 
 ### Welt 2 – Frostbeule
-- Öffnet sein Gefrierfach und **friert** fliegende Früchte in einem Kegel ein.
+- Öffnet sein Gefrierfach: Eine **Kältezone** davor friert Früchte ein, die
+  hindurchfliegen.
 - Schwachstelle: der Kompressor hinten (Banane) und das Türscharnier (Kokosnuss).
 - Phase 3: Die Tür steht offen und alles rutscht auf Eis; Salz nutzen.
 
@@ -488,7 +490,7 @@ werden pro Phase neu aufgefüllt, Gesamtpunkte zählen.
 
 ### Welt 4 – Kapitän Spülmaschine
 - Schwimmt im Spülbecken, **schaukelt** mit den Wellen (bewegliches Ziel).
-- Feuert Spülmaschinen-Tabs als Kanonenkugeln auf Schaumplattformen.
+- Bläst Schaumblasen, die aufsteigen und kurzzeitig Deckungsplattformen bilden.
 - Phase 2: Spülbeckenstöpsel treffen → Wasser läuft ab → das Schiff sitzt auf
   und kippt.
 
@@ -760,13 +762,13 @@ Ziel: Ein spielbarer Kern, der den Spaß des Schießens beweist.
 
 1. **Plattform zuerst:** Browser (Maus) oder Mobile (Touch)? Beeinflusst UI-Größe
    und Kamerasteuerung.
-2. **Level-Reihenfolge:** Soll es grundsätzlich feste Frucht-Reihenfolgen geben
-   (klassisch) oder werden Obstkorb-Levels mit freier Wahl früher eingeführt?
-3. **Aggressive Gegner:** Wie viele Geräte dürfen aktiv „zurückschießen"
-   (Messerblock, Boss-Mechaniken), ohne dass der Schwerpunkt vom eigenen
-   Schießen weggeht? Vorschlag: maximal 1 solcher Gegner pro normalem Level.
-4. **Sprache:** Kauderwelsch-Stimmen und textlose Comics ermöglichen
+2. **Sprache:** Kauderwelsch-Stimmen und textlose Comics ermöglichen
    Internationalisierung fast ohne Übersetzung. Sollen UI-Texte zweisprachig
    (DE/EN) sein?
-5. **Monetarisierung:** Dieses Dokument geht von einem Spiel ohne
-   In-App-Käufe aus. Bestätigen.
+
+### Entschieden
+
+- **Gegner schießen nie zurück.** Kein Gegner feuert Geschosse oder greift die
+  Schleuder an; sie wirken nur durch Berührung oder passive Zonen.
+- **Frucht-Reihenfolge ist fest** pro Level und kann nicht geändert werden.
+- **Keine Monetarisierung.** Keine In-App-Käufe, keine Werbung, keine Kaufwährung.

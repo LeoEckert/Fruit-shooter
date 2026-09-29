@@ -45,6 +45,7 @@ the Blender Gang before being turned into smoothie tomorrow morning.
 | **Shooting is everything** | Every mechanic builds on the shot. No walking, no building, no in-level menus. Aim, release, tap once in flight. |
 | **Chaos with a cause** | Collapses and chain reactions are spectacular but understandable. Players who understand a level can plan the chaos. |
 | **Kitchen logic** | Every rule makes everyday sense: juice makes things wet, wet toasters spark, ice slides, honey sticks. Players should be able to guess interactions. |
+| **Enemies never shoot back** | Appliances are targets, not attackers. They never fire projectiles or attack the slingshot. They may only affect fruit through contact or passive zones (steam, suction, cold). |
 | **Silly, never mean** | Slapstick instead of violence. Appliances break, tip over, rattle and whine. Fruit bursts into juice, not blood. |
 | **Short and replayable** | A level takes 30 to 90 seconds. Restarting is instant. |
 
@@ -248,10 +249,9 @@ mid-flight).
 
 ### 4.4 Fruit order and the fruit bowl
 
-- **Default:** Each level defines the **order** of the fruits (as in the genre
-  classic). The fruit bowl to the left of the slingshot shows all upcoming fruits.
-- **From World 3 – "fruit basket levels":** Some levels let players **choose the
-  order freely** (tapping a fruit in the bowl loads it).
+- **Fixed order (decided):** Every level defines the **order** of the fruits
+  (as in the genre classic). The player cannot change it. The fruit bowl to the
+  left of the slingshot shows all upcoming fruits, so the player can plan ahead.
 - **Leftover fruit = bonus points** (see [10](#10-score-stars--rating)). On a win
   they hop out of the bowl cheering.
 
@@ -277,9 +277,10 @@ the recipe book the first time they are triggered.
 ## 5. The Blender Gang (Enemies)
 
 The enemies are kitchen appliances with faces (knobs as eyes, cables as tails).
-**Most of them do not attack** – they are the targets. Some appliances do have
-**active behavior** that changes the fortress. This adds variety without the
-player having to do anything other than shoot.
+**They never attack or shoot back** – they are the targets. Some appliances do
+have **active behavior** that changes the fortress or reacts to fruit that
+touches them or enters their zone. This adds variety without the player having to
+do anything other than shoot.
 
 ### 5.1 Foot soldiers
 
@@ -303,7 +304,7 @@ player having to do anything other than shoot.
 | **Microwave** | very high | Door opens and closes rhythmically. Open = a fruit shot inside closes the door, and after 2 s **the fruit explodes** inside (heavy internal damage). |
 | **Kitchen Scale** | medium | Tilts platforms: whatever lies on one side lifts the other. Physics puzzle element. |
 | **Robot Vacuum** | medium | Drives back and forth on the floor and **sucks up fruit lying around** (kiwi counter). Pushes small objects. |
-| **Knife Block** | high | Fires a knife horizontally toward the slingshot every 6 s. If it hits a fruit **in flight**, the fruit is cut in half (two weaker halves keep flying). The only "shooting" enemy. |
+| **Knife Block** | high | Blades stick out of the top and pop up every 6 s. A fruit that hits the blades is cut in half (two weaker halves keep flying). Hitting the wooden side is safe. |
 | **Fridge Magnet** | low | Attracts metal in a small radius and holds structures together until destroyed – then everything falls apart. |
 | **Ice Maker** | medium | Freezes fruit that hits it (the fruit becomes an ice block: slides, is heavy, shatters). |
 
@@ -466,14 +467,15 @@ gang partly rebuilds the fortress (animation). Fruits are refilled each phase;
 the total score carries over.
 
 ### World 1 – Toast Tyrant
-- **Phase 1:** Stands behind a wall of toast slices. Launches toast every 4 s,
-  which stays as new cover. → Tear down cover faster than it is rebuilt.
+- **Phase 1:** Stands behind a wall of toast slices. Pops up toast every 4 s,
+  which lands in front of it as new cover. → Tear down cover faster than it is rebuilt.
 - **Phase 2:** A lever on its side becomes visible. Hit → it jumps up and lands
   hard. → Wet fruit into the slots = short-circuit damage.
 - **Phase 3:** Stands on a wobbly platform above the sink. Knock it over.
 
 ### World 2 – Frostbite
-- Opens its freezer compartment and **freezes** flying fruit in a cone.
+- Opens its freezer compartment: a **cold zone** in front of it freezes fruit
+  that flies through it.
 - Weak spots: the compressor at the back (banana) and the door hinge (coconut).
 - Phase 3: The door stands open and everything slides on ice; use salt.
 
@@ -484,7 +486,7 @@ the total score carries over.
 
 ### World 4 – Captain Dishwasher
 - Floats in the sink and **rocks** with the waves (moving target).
-- Fires dishwasher tabs as cannonballs at foam platforms.
+- Blows foam bubbles that float up and form temporary cover platforms.
 - Phase 2: Hit the sink plug → water drains → the ship runs aground and tips over.
 
 ### World 5 – The Grinders
@@ -750,12 +752,12 @@ Goal: a playable core that proves the fun of shooting.
 
 1. **Platform first:** Browser (mouse) or mobile (touch)? Affects UI size and
    camera controls.
-2. **Level order:** Should fruit order generally be fixed (classic), or should
-   fruit basket levels with free choice be introduced earlier?
-3. **Aggressive enemies:** How many appliances may actively "shoot back" (knife
-   block, boss mechanics) without shifting the focus away from the player's own
-   shooting? Suggestion: at most 1 such enemy per regular level.
-4. **Language:** Gibberish voices and textless comics make localization possible
+2. **Language:** Gibberish voices and textless comics make localization possible
    with almost no translation. Should UI text be bilingual (DE/EN)?
-5. **Monetization:** This document assumes a game without in-app purchases.
-   Please confirm.
+
+### Decided
+
+- **Enemies never shoot back.** No enemy fires projectiles or attacks the
+  slingshot; they only act through contact or passive zones.
+- **Fruit order is fixed** per level and cannot be changed by the player.
+- **No monetization.** No in-app purchases, no ads, no purchasable currency.
